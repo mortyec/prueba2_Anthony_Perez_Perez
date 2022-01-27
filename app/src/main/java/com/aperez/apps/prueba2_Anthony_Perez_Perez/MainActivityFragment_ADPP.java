@@ -97,7 +97,7 @@ public class MainActivityFragment_ADPP extends Fragment {
             row.setVisibility(View.GONE);
         }
         for (int rowNumber = 0; rowNumber < numberOfGuessRows; rowNumber++) {
-            guessTableRows[rowNumber].setVisibility(View.VISIBLE);
+            guessTableRows[rowNumber+2].setVisibility(View.VISIBLE);
         }
     }
 

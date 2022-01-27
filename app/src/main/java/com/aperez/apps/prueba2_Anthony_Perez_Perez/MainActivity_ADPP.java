@@ -76,7 +76,7 @@ public class MainActivity_ADPP extends AppCompatActivity {
                     .getStringSet(REGIONS, null));
 
             this.quizFragment.resetQuiz();
-            
+
 
             preferencesChanged = false;
         }
