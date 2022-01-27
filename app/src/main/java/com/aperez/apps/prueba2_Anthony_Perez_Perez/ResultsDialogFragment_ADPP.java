@@ -34,6 +34,7 @@ public class ResultsDialogFragment_ADPP extends DialogFragment{
                     MainActivityFragment_ADPP quizFragment = (MainActivityFragment_ADPP) getParentFragment();
                     try{
                         quizFragment.resetQuiz();
+                        
                     }catch (Exception e){
                         Log.e(quizViewModel.getTag(),"Unable to call resetQuiz()", e);
                     }

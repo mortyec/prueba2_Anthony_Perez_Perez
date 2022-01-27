@@ -58,7 +58,6 @@ public class MainActivity_ADPP extends AppCompatActivity {
         //
         Bundle datosExtra =  getIntent().getExtras();
 
-        
         String nombre = datosExtra.getString("key_nombre");
 
         textView_usuario = findViewById(R.id.textView_usuario);
