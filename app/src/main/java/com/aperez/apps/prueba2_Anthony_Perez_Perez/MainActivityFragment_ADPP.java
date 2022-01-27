@@ -41,8 +41,8 @@ public class MainActivityFragment_ADPP extends Fragment {
     private TableRow[] guessTableRows;
     private TextView answerTextView;
     private QuizViewModel_ADPP quizViewModel;
-    private int nivel = 1;
-    private int i = 0;
+    int nivel = 1;
+    int i = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -125,6 +125,10 @@ public class MainActivityFragment_ADPP extends Fragment {
         this.quizViewModel.resetCorrectAnswers();
         this.quizViewModel.clearQuizCountriesList();
 
+        if(i > 4 ){
+            nivel = 1;
+        }
+
         int flagCounter = 1;
         int numberOfFlags = this.quizViewModel.getFileNameList().size();
         while (flagCounter <= QuizViewModel_ADPP.getFlagsInQuiz()) {
@@ -136,9 +140,6 @@ public class MainActivityFragment_ADPP extends Fragment {
                 this.quizViewModel.getQuizCountriesList().add(filename);
                 ++flagCounter;
             }
-        }
-        if(nivel > 4 ){
-            nivel = 1;
         }
         nivel = nivel + 1;
         i++;

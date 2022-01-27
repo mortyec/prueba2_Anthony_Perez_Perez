@@ -125,8 +125,7 @@ public class QuizViewModel_ADPP extends ViewModel {
     }
 
     public void setGuessRows(String choices) {
-        this.guessRows = 1;
-        //this.guessRows = Integer.parseInt(choices) / 2;
+      this.guessRows = Integer.parseInt(choices) / 2;
     }
 
     public String getNextCountryFlag(){
