@@ -41,6 +41,8 @@ public class MainActivityFragment_ADPP extends Fragment {
     private TableRow[] guessTableRows;
     private TextView answerTextView;
     private QuizViewModel_ADPP quizViewModel;
+    private int nivel = 1;
+    private int i = 0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -97,7 +99,7 @@ public class MainActivityFragment_ADPP extends Fragment {
             row.setVisibility(View.GONE);
         }
         for (int rowNumber = 0; rowNumber < numberOfGuessRows; rowNumber++) {
-            guessTableRows[rowNumber+2].setVisibility(View.VISIBLE);
+            guessTableRows[rowNumber].setVisibility(View.VISIBLE);
         }
     }
 
@@ -120,7 +122,7 @@ public class MainActivityFragment_ADPP extends Fragment {
                 ++flagCounter;
             }
         }
-
+        nivel = nivel + 1;
         this.updateGuessRows();
         this.loadNextFlag();
     }
