@@ -9,7 +9,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.aperez.apps.lifecyclehelpers.QuizViewModel;
+import com.aperez.apps.lifecyclehelpers.QuizViewModel_ADPP;
 
 public class ResultsDialogFragment_ADPP extends DialogFragment{
 
@@ -21,7 +21,7 @@ public class ResultsDialogFragment_ADPP extends DialogFragment{
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
-        final QuizViewModel quizViewModel = ViewModelProviders.of(getActivity()).get(QuizViewModel.class);
+        final QuizViewModel_ADPP quizViewModel = ViewModelProviders.of(getActivity()).get(QuizViewModel_ADPP.class);
         int totalGuesses = quizViewModel.getTotalGuesses();
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(

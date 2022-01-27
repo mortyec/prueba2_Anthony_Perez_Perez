@@ -10,7 +10,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-public class QuizViewModel extends ViewModel {
+public class QuizViewModel_ADPP extends ViewModel {
     private static final String TAG = "FlagQuiz Activity";
     private static final int FLAGS_IN_QUIZ = 10;
 
@@ -23,7 +23,7 @@ public class QuizViewModel extends ViewModel {
     private int guessRows;
 
 
-    public QuizViewModel() {
+    public QuizViewModel_ADPP() {
         fileNameList = new ArrayList<>();
         quizCountriesList = new ArrayList<>();
     }

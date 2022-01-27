@@ -28,8 +28,8 @@ import android.widget.TextView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 
-import com.aperez.apps.eventhandlers.GuessButtonListener;
-import com.aperez.apps.lifecyclehelpers.QuizViewModel;
+import com.aperez.apps.eventhandlers.GuessButtonListener_ADPP;
+import com.aperez.apps.lifecyclehelpers.QuizViewModel_ADPP;
 
 public class MainActivityFragment_ADPP extends Fragment {
 
@@ -40,12 +40,12 @@ public class MainActivityFragment_ADPP extends Fragment {
     private ImageView flagImageView;
     private TableRow[] guessTableRows;
     private TextView answerTextView;
-    private QuizViewModel quizViewModel;
+    private QuizViewModel_ADPP quizViewModel;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.quizViewModel = ViewModelProviders.of(getActivity()).get(QuizViewModel.class);
+        this.quizViewModel = ViewModelProviders.of(getActivity()).get(QuizViewModel_ADPP.class);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class MainActivityFragment_ADPP extends Fragment {
                              Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_main_adpp, container, false);
-        OnClickListener guessButtonListener = new GuessButtonListener(this);
+        OnClickListener guessButtonListener = new GuessButtonListener_ADPP(this);
         TableLayout answersTableLayout = view.findViewById(R.id.answersTableLayout);
 
         this.random = new SecureRandom();
@@ -74,7 +74,7 @@ public class MainActivityFragment_ADPP extends Fragment {
                     this.guessTableRows[i] = (TableRow) answersTableLayout.getChildAt(i);
                 }
             } catch (ArrayStoreException e) {
-                Log.e(QuizViewModel.getTag(),
+                Log.e(QuizViewModel_ADPP.getTag(),
                         "Error getting button rows on loop #" + String.valueOf(i), e);
             }
         }
@@ -86,7 +86,7 @@ public class MainActivityFragment_ADPP extends Fragment {
         }
 
         this.questionNumberTextView.setText(
-                getString(R.string.question, 1, QuizViewModel.getFlagsInQuiz()));
+                getString(R.string.question, 1, QuizViewModel_ADPP.getFlagsInQuiz()));
         return view;
     }
 
@@ -110,7 +110,7 @@ public class MainActivityFragment_ADPP extends Fragment {
 
         int flagCounter = 1;
         int numberOfFlags = this.quizViewModel.getFileNameList().size();
-        while (flagCounter <= QuizViewModel.getFlagsInQuiz()) {
+        while (flagCounter <= QuizViewModel_ADPP.getFlagsInQuiz()) {
             int randomIndex = this.random.nextInt(numberOfFlags);
 
             String filename = this.quizViewModel.getFileNameList().get(randomIndex);
@@ -134,14 +134,14 @@ public class MainActivityFragment_ADPP extends Fragment {
         answerTextView.setText("");
 
         questionNumberTextView.setText(getString(R.string.question,
-                (quizViewModel.getCorrectAnswers() + 1), QuizViewModel.getFlagsInQuiz()));
+                (quizViewModel.getCorrectAnswers() + 1), QuizViewModel_ADPP.getFlagsInQuiz()));
 
         try (InputStream stream = assets.open(region + "/" + nextImage + ".png")) {
             Drawable flag = Drawable.createFromStream(stream, nextImage);
             flagImageView.setImageDrawable(flag);
             animate(false);
         } catch (IOException e) {
-            Log.e(QuizViewModel.getTag(), "Error Loading " + nextImage, e);
+            Log.e(QuizViewModel_ADPP.getTag(), "Error Loading " + nextImage, e);
         }
 
         this.quizViewModel.shuffleFilenameList();
@@ -211,7 +211,7 @@ public class MainActivityFragment_ADPP extends Fragment {
         return answerTextView;
     }
 
-    public QuizViewModel getQuizViewModel() {
+    public QuizViewModel_ADPP getQuizViewModel() {
         return quizViewModel;
     }
 }

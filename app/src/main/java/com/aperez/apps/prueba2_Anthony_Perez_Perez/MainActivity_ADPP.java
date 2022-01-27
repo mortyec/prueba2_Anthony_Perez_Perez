@@ -13,8 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.aperez.apps.eventhandlers.PreferenceChangeListener;
-import com.aperez.apps.lifecyclehelpers.QuizViewModel;
+import com.aperez.apps.eventhandlers.PreferenceChangeListener_ADPP;
+import com.aperez.apps.lifecyclehelpers.QuizViewModel_ADPP;
 
 public class MainActivity_ADPP extends AppCompatActivity {
     public static final String CHOICES = "pref_numberOfChoices";
@@ -22,7 +22,7 @@ public class MainActivity_ADPP extends AppCompatActivity {
     private boolean deviceIsPhone = true;
     private boolean preferencesChanged = true;
     private MainActivityFragment_ADPP quizFragment;
-    private QuizViewModel quizViewModel;
+    private QuizViewModel_ADPP quizViewModel;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
 
     private TextView textView_usuario;
@@ -48,8 +48,8 @@ public class MainActivity_ADPP extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.quizViewModel = ViewModelProviders.of(this).get(QuizViewModel.class);
-        this.preferencesChangeListener = new PreferenceChangeListener(this);
+        this.quizViewModel = ViewModelProviders.of(this).get(QuizViewModel_ADPP.class);
+        this.preferencesChangeListener = new PreferenceChangeListener_ADPP(this);
         setContentView(R.layout.activity_main_adpp);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -86,7 +86,7 @@ public class MainActivity_ADPP extends AppCompatActivity {
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             // Inflate the menu; this adds items to the action bar if it is present.
-            getMenuInflater().inflate(R.menu.menu_main, menu);
+            getMenuInflater().inflate(R.menu.menu_main_adpp, menu);
             return true;
         } else {
             return false;
@@ -109,7 +109,7 @@ public class MainActivity_ADPP extends AppCompatActivity {
         return this.quizFragment;
     }
 
-    public QuizViewModel getQuizViewModel() {
+    public QuizViewModel_ADPP getQuizViewModel() {
         return quizViewModel;
     }
 
