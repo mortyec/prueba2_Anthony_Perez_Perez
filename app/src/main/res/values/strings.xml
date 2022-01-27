@@ -23,4 +23,12 @@
 
     <string name="tv_usuario">Usuario:</string>
     <string name="tv_contraseña">Contraseña:</string>
+
+    <string name="et_usuario1">Usuario 1:</string>
+    <string name="et_usuario1_usuario1">Usuario: morty</string>
+    <string name="et_usuario1_contraseña1">Contraseña: 12345</string>
+
+    <string name="et_usuario2">Usuario 2:</string>
+    <string name="et_usuario1_usuario2">Usuario: rick</string>
+    <string name="et_usuario1_contraseña2">Contraseña: 54321</string>
 </resources>

@@ -28,7 +28,8 @@ public class Activity_Cliente_Login_ADPP extends AppCompatActivity {
         if (editTextLoginUsuario.getText().toString().equals("") && editTextLoginContraseña.getText().toString().equals("")) {
             Toast.makeText(this, "Ingrese un usuario y contraseña correcta", Toast.LENGTH_SHORT).show();
         } else {
-            if(editTextLoginUsuario.getText().toString().equals("morty") && editTextLoginContraseña.getText().toString().equals("12345") ){
+            if(editTextLoginUsuario.getText().toString().equals("morty") && editTextLoginContraseña.getText().toString().equals("12345")
+                    || (editTextLoginUsuario.getText().toString().equals("rick") && editTextLoginContraseña.getText().toString().equals("54321"))){
                 Intent intent = new Intent(this, MainActivity_ADPP.class);
                 startActivity(intent);
             }else {
