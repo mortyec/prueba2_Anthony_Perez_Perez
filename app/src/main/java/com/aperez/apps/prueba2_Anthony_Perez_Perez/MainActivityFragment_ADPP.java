@@ -93,7 +93,22 @@ public class MainActivityFragment_ADPP extends Fragment {
     }
 
     public void updateGuessRows() {
-
+        switch (i){
+            case 1:
+                this.quizViewModel.setGuessRows("2");
+                break;
+            case 2:
+                this.quizViewModel.setGuessRows("4");
+                break;
+            case 3:
+                this.quizViewModel.setGuessRows("6");
+                break;
+            case 4:
+                this.quizViewModel.setGuessRows("8");
+                break;
+            default:
+                this.quizViewModel.setGuessRows("2");
+        }
         int numberOfGuessRows = this.quizViewModel.getGuessRows();
         for (TableRow row : this.guessTableRows) {
             row.setVisibility(View.GONE);
@@ -122,7 +137,11 @@ public class MainActivityFragment_ADPP extends Fragment {
                 ++flagCounter;
             }
         }
+        if(nivel > 4 ){
+            nivel = 1;
+        }
         nivel = nivel + 1;
+        i++;
         this.updateGuessRows();
         this.loadNextFlag();
     }
