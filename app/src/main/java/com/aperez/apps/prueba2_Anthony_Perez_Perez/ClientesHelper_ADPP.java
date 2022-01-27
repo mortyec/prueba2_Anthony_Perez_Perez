@@ -1,16 +1,16 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.annotation.Nullable;
 
-public class ADPP_ClientesHelper extends SQLiteOpenHelper {
+public class ClientesHelper_ADPP extends SQLiteOpenHelper {
 
     private String createTable_Clientes = "CREATE TABLE Clientes (Codigo INTEGER PRIMARY KEY AUTOINCREMENT, " + "Nombre TEXT, " +
             "Apellido TEXT, " + " Usuario TEXT , " + "Contraseña TEXT )";
 
-    public ADPP_ClientesHelper(@Nullable Context context, @Nullable String name,
+    public ClientesHelper_ADPP(@Nullable Context context, @Nullable String name,
                                @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }

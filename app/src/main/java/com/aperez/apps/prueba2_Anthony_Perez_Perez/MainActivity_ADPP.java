@@ -1,4 +1,4 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
@@ -15,12 +15,12 @@ import android.view.MenuItem;
 import com.aperez.apps.eventhandlers.PreferenceChangeListener;
 import com.aperez.apps.lifecyclehelpers.QuizViewModel;
 
-public class ADPP_MainActivity extends AppCompatActivity {
+public class MainActivity_ADPP extends AppCompatActivity {
     public static final String CHOICES = "pref_numberOfChoices";
     public static final String REGIONS = "pref_regionsToInclude";
     private boolean deviceIsPhone = true;
     private boolean preferencesChanged = true;
-    private ADPP_MainActivityFragment quizFragment;
+    private MainActivityFragment_ADPP quizFragment;
     private QuizViewModel quizViewModel;
     private OnSharedPreferenceChangeListener preferencesChangeListener;
 
@@ -47,7 +47,7 @@ public class ADPP_MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.quizViewModel = ViewModelProviders.of(this).get(QuizViewModel.class);
         this.preferencesChangeListener = new PreferenceChangeListener(this);
-        setContentView(R.layout.activity_adpp_main);
+        setContentView(R.layout.activity_main_adpp);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         this.setSharedPreferences();
@@ -58,7 +58,7 @@ public class ADPP_MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (preferencesChanged) {
-            this.quizFragment = (ADPP_MainActivityFragment) getSupportFragmentManager()
+            this.quizFragment = (MainActivityFragment_ADPP) getSupportFragmentManager()
                     .findFragmentById(R.id.quizFragment);
             this.quizViewModel.setGuessRows(PreferenceManager.getDefaultSharedPreferences(this)
                     .getString(CHOICES, null));
@@ -85,7 +85,7 @@ public class ADPP_MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent preferencesIntent = new Intent(this, ADPP_SettingsActivity.class);
+        Intent preferencesIntent = new Intent(this, SettingsActivity_ADPP.class);
         startActivity(preferencesIntent);
         return super.onOptionsItemSelected(item);
     }
@@ -95,7 +95,7 @@ public class ADPP_MainActivity extends AppCompatActivity {
                 Configuration.SCREENLAYOUT_SIZE_MASK;
     }
 
-    public ADPP_MainActivityFragment getQuizFragment() {
+    public MainActivityFragment_ADPP getQuizFragment() {
         return this.quizFragment;
     }
 

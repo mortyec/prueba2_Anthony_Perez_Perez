@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.aperez.apps.anthony_perez_2doparcial_prueba_01">
+    package="com.aperez.apps.prueba2_Anthony_Perez_Perez">
 
     <application
         android:allowBackup="true"
@@ -18,7 +18,7 @@
             android:name=".ADPP_Login"
             android:exported="false" />
         <activity
-            android:name=".ADPP_Activity_Cliente_Login"
+            android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.Activity_Cliente_Login_ADPP"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ADPP_MainActivity"
+            android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivity_ADPP"
             android:label="@string/app_name"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
@@ -40,13 +40,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ADPP_SettingsActivity"
+            android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.SettingsActivity_ADPP"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".ADPP_MainActivity"
+            android:parentActivityName="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivity_ADPP"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivity" />
+                android:value="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivity_ADPP" />
         </activity>
     </application>
 

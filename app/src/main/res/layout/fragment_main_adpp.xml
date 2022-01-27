@@ -5,8 +5,8 @@
     android:id="@+id/quizConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ADPP_MainActivityFragment"
-    tools:showIn="@layout/activity_adpp_main">
+    tools:context=".MainActivityFragment_ADPP"
+    tools:showIn="@layout/activity_main_adpp">
 
 
     <TextView

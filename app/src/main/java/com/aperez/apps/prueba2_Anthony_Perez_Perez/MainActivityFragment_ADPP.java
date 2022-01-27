@@ -1,4 +1,4 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,7 +31,7 @@ import android.widget.TableRow;
 import com.aperez.apps.eventhandlers.GuessButtonListener;
 import com.aperez.apps.lifecyclehelpers.QuizViewModel;
 
-public class ADPP_MainActivityFragment extends Fragment {
+public class MainActivityFragment_ADPP extends Fragment {
 
     private SecureRandom random;
     private Animation shakeAnimation;
@@ -52,7 +52,7 @@ public class ADPP_MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_adpp_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main_adpp, container, false);
         OnClickListener guessButtonListener = new GuessButtonListener(this);
         TableLayout answersTableLayout = view.findViewById(R.id.answersTableLayout);
 

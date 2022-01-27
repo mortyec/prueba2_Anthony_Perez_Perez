@@ -1,4 +1,4 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 
 import android.app.AlertDialog;
@@ -11,7 +11,7 @@ import android.util.Log;
 
 import com.aperez.apps.lifecyclehelpers.QuizViewModel;
 
-public class ADPP_ResultsDialogFragment extends DialogFragment{
+public class ResultsDialogFragment_ADPP extends DialogFragment{
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class ADPP_ResultsDialogFragment extends DialogFragment{
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try{
-                    ADPP_MainActivityFragment quizFragment = (ADPP_MainActivityFragment) getParentFragment();
+                    MainActivityFragment_ADPP quizFragment = (MainActivityFragment_ADPP) getParentFragment();
                     try{
                         quizFragment.resetQuiz();
                     }catch (Exception e){

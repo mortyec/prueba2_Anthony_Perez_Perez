@@ -6,16 +6,16 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-import com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivityFragment;
-import com.aperez.apps.anthony_perez_2doparcial_prueba_01.R;
-import com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_ResultsDialogFragment;
+import com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivityFragment_ADPP;
+import com.aperez.apps.prueba2_Anthony_Perez_Perez.R;
+import com.aperez.apps.prueba2_Anthony_Perez_Perez.ResultsDialogFragment_ADPP;
 import com.aperez.apps.lifecyclehelpers.QuizViewModel;
 
 public class GuessButtonListener implements OnClickListener {
-    private ADPP_MainActivityFragment ADPPMainActivityFragment;
+    private MainActivityFragment_ADPP ADPPMainActivityFragment;
     private Handler handler;
 
-    public GuessButtonListener(ADPP_MainActivityFragment ADPPMainActivityFragment) {
+    public GuessButtonListener(MainActivityFragment_ADPP ADPPMainActivityFragment) {
         this.ADPPMainActivityFragment = ADPPMainActivityFragment;
         this.handler = new Handler();
     }
@@ -37,7 +37,7 @@ public class GuessButtonListener implements OnClickListener {
 
             if (this.ADPPMainActivityFragment.getQuizViewModel().getCorrectAnswers()
                     == QuizViewModel.getFlagsInQuiz()) {
-                ADPP_ResultsDialogFragment quizResults = new ADPP_ResultsDialogFragment();
+                ResultsDialogFragment_ADPP quizResults = new ResultsDialogFragment_ADPP();
                 quizResults.setCancelable(false);
                 try {
                     quizResults.show(this.ADPPMainActivityFragment.getChildFragmentManager(), "Quiz Results");

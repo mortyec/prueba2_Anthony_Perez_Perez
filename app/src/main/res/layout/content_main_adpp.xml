@@ -2,8 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/quizFragment"
-    android:name="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivityFragment"
+    android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivityFragment_ADPP"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:layout="@layout/fragment_adpp_main" />
+    tools:layout="@layout/fragment_main_adpp" />

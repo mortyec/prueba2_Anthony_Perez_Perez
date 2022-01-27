@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivity">
+    tools:context="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivity_ADPP">
     <item
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_settings_black_24dp"

@@ -1,4 +1,4 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

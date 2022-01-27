@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_SettingsActivity">
+    tools:context="com.aperez.apps.prueba2_Anthony_Perez_Perez.SettingsActivity_ADPP">
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"

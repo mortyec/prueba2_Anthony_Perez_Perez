@@ -4,15 +4,15 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.widget.Toast;
 
-import com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivity;
-import com.aperez.apps.anthony_perez_2doparcial_prueba_01.R;
+import com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivity_ADPP;
+import com.aperez.apps.prueba2_Anthony_Perez_Perez.R;
 
 import java.util.Set;
 
 public class PreferenceChangeListener implements OnSharedPreferenceChangeListener {
-    private ADPP_MainActivity mainActivity;
+    private MainActivity_ADPP mainActivity;
 
-    public PreferenceChangeListener(ADPP_MainActivity mainActivity) {
+    public PreferenceChangeListener(MainActivity_ADPP mainActivity) {
         this.mainActivity = mainActivity;
     }
 
@@ -22,7 +22,7 @@ public class PreferenceChangeListener implements OnSharedPreferenceChangeListene
 
         if (key.equals(this.mainActivity.getREGIONS())) {
             this.mainActivity.getQuizViewModel().setGuessRows(sharedPreferences.getString(
-                    ADPP_MainActivity.CHOICES, null));
+                    MainActivity_ADPP.CHOICES, null));
             this.mainActivity.getQuizFragment().resetQuiz();
         } else if (key.equals(this.mainActivity.getCHOICES())) {
             Set<String> regions = sharedPreferences.getStringSet(this.mainActivity.getREGIONS(),

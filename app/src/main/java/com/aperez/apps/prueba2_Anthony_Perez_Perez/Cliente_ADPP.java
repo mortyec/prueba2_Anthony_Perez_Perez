@@ -1,13 +1,13 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
-public class ADPP_Cliente {
+public class Cliente_ADPP {
     private int codigo;
     private String nombre;
     private String apellido;
     private String usuario;
     private String contraseña;
 
-    public ADPP_Cliente() {
+    public Cliente_ADPP() {
     }
 
     public int getCodigo() {

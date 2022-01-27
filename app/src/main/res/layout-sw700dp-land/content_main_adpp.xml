@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_SettingsActivityFragment"
+        android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.SettingsActivityFragment_ADPP"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout="@layout/fragment_adpp_settings" />
+        tools:layout="@layout/fragment_settings_adpp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/quizFragment"
-        android:name="com.aperez.apps.anthony_perez_2doparcial_prueba_01.ADPP_MainActivityFragment"
+        android:name="com.aperez.apps.prueba2_Anthony_Perez_Perez.MainActivityFragment_ADPP"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
@@ -48,6 +48,6 @@
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:layout="@layout/fragment_adpp_main" />
+        tools:layout="@layout/fragment_main_adpp" />
 
 </android.support.constraint.ConstraintLayout>

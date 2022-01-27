@@ -1,4 +1,4 @@
-package com.aperez.apps.anthony_perez_2doparcial_prueba_01;
+package com.aperez.apps.prueba2_Anthony_Perez_Perez;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,17 +7,17 @@ import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
 
-public class ADPP_ClienteDAL {
-    private ADPP_ClientesHelper clientesHelper; // crea la BD
+public class ClienteDAL_ADPP {
+    private ClientesHelper_ADPP clientesHelper; // crea la BD
     private SQLiteDatabase sql;
     private Context context;
 
-    public ADPP_ClienteDAL(Context context){
+    public ClienteDAL_ADPP(Context context){
         this.context=context;
     }
 
     public void openDAL(){
-        clientesHelper=new ADPP_ClientesHelper(context,"ClientesDB",null,1);
+        clientesHelper=new ClientesHelper_ADPP(context,"ClientesDB",null,1);
         sql=clientesHelper.getWritableDatabase();
     }
 
@@ -25,7 +25,7 @@ public class ADPP_ClienteDAL {
         sql.close();
     }
 
-    public long insertDAL(ADPP_Cliente cliente){
+    public long insertDAL(Cliente_ADPP cliente){
         long count =0;
         try {
             this.openDAL();
@@ -45,8 +45,8 @@ public class ADPP_ClienteDAL {
         return count;
     }
 
-    public ADPP_Cliente selectByCodigoDAL(int codigo){
-        ADPP_Cliente cliente=null;
+    public Cliente_ADPP selectByCodigoDAL(int codigo){
+        Cliente_ADPP cliente=null;
         try {
             this.openDAL();
             String select = "SELECT Codigo, Nombre, Apellido, Usuario, Contraseña FROM Clientes WHERE Codigo="+codigo;
@@ -54,7 +54,7 @@ public class ADPP_ClienteDAL {
 
             if(cursor.moveToFirst())
             {
-                cliente = new ADPP_Cliente();
+                cliente = new Cliente_ADPP();
                 cliente.setNombre(cursor.getString(1));
                 cliente.setApellido(cursor.getString(2));
                 cliente.setUsuario(cursor.getString(3));
@@ -69,8 +69,8 @@ public class ADPP_ClienteDAL {
         return cliente;
     }
 
-    public ADPP_Cliente selectByUsuarioDAL(String Usuario){
-        ADPP_Cliente cliente=null;
+    public Cliente_ADPP selectByUsuarioDAL(String Usuario){
+        Cliente_ADPP cliente=null;
         try {
             this.openDAL();
             String select = "SELECT Codigo, Nombre, Apellido, Usuario, Contraseña FROM Clientes WHERE Usuario="+Usuario;
@@ -78,7 +78,7 @@ public class ADPP_ClienteDAL {
 
             if(cursor.moveToFirst())
             {
-                cliente = new ADPP_Cliente();
+                cliente = new Cliente_ADPP();
                 cliente.setNombre(cursor.getString(1));
                 cliente.setApellido(cursor.getString(2));
                 cliente.setUsuario(cursor.getString(3));
@@ -122,8 +122,8 @@ public class ADPP_ClienteDAL {
         return list;
     }
 
-    public ArrayList<ADPP_Cliente> selectDAL2(){
-        ArrayList<ADPP_Cliente> list = null;
+    public ArrayList<Cliente_ADPP> selectDAL2(){
+        ArrayList<Cliente_ADPP> list = null;
         try{
             this.openDAL();
             String select = "SELECT Codigo, Nombre, Apellido, Usuario, Contraseña FROM Clientes";
@@ -131,9 +131,9 @@ public class ADPP_ClienteDAL {
 
             if(cursor.moveToFirst())
             {
-                list = new ArrayList<ADPP_Cliente>();
+                list = new ArrayList<Cliente_ADPP>();
                 do{
-                    ADPP_Cliente cliente = new ADPP_Cliente();
+                    Cliente_ADPP cliente = new Cliente_ADPP();
                     cliente.setCodigo(Integer.valueOf(cursor.getString(0)));
                     cliente.setNombre(cursor.getString(1));
                     cliente.setApellido(cursor.getString(2));
@@ -166,7 +166,7 @@ public class ADPP_ClienteDAL {
         return count;
     }
 
-    public int updateDAL(ADPP_Cliente cliente){
+    public int updateDAL(Cliente_ADPP cliente){
         int count =0;
         try{
             this.openDAL();
